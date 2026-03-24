@@ -20,7 +20,7 @@ namespace DatabaseExample
             using var conn = new SqlConnection(cs);
             conn.Open();
 
-            using var cmd = new SqlCommand("SELECT Name FROM [Table]", conn);
+            using var cmd = new SqlCommand("SELECT Name FROM [Students]", conn);
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
             {
