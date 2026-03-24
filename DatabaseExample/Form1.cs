@@ -19,10 +19,8 @@ namespace DatabaseExample
 
             using var conn = new SqlConnection(cs);
             conn.Open();
-
-
-
-
+            # This is a comment
+                    
             using var cmd = new SqlCommand("SELECT Name FROM [Students]", conn);
             using var reader = cmd.ExecuteReader();
             while (reader.Read())
